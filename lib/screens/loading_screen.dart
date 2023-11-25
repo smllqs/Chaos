@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -17,13 +18,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Chaos.',
               style: TextStyle(
                   fontSize: 70,
@@ -32,29 +33,27 @@ class _LoadingScreenState extends State<LoadingScreen> {
                   height: 1,
                   color: Colors.black),
             ),
-            const SizedBox(
-              height: 80,
+            SizedBox(
+              height: 120,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                      backgroundColor:
-                          const MaterialStatePropertyAll<Color>(Colors.black),
-                      shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Get started now',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.w600),
-                    ),
-                  ),
+                Text(
+                  'Let\'s get productive!',
+                  style: TextStyle(fontWeight: FontWeight.w400),
                 ),
+                SizedBox(
+                  width: 10,
+                ),
+                CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 22,
+                  child: Icon(
+                    CupertinoIcons.arrow_right,
+                    color: Colors.white,
+                  ),
+                )
               ],
             )
           ],
@@ -63,3 +62,21 @@ class _LoadingScreenState extends State<LoadingScreen> {
     );
   }
 }
+
+// Text(
+//                       'Get started now',
+//                       style: TextStyle(
+//                           color: Colors.white, fontWeight: FontWeight.w600),
+//                     ),
+
+// TextButton(
+//                   onPressed: () {},
+//                   style: const ButtonStyle(
+//                     backgroundColor:
+//                         MaterialStatePropertyAll<Color>(Colors.black),
+//                     // shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+//                     //     RoundedRectangleBorder(
+//                     //         borderRadius: BorderRadius.circular(10)))
+//                   ),
+//                   child: const Icon(CupertinoIcons.arrow_right),
+//                 )
