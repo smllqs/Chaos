@@ -5,18 +5,21 @@ class TaskAppBar extends StatelessWidget {
   // APP BAR
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Icon(CupertinoIcons.person),
-        Row(
-          children: [
-            Icon(CupertinoIcons.bell),
-            SizedBox(width: 10),
-            Icon(CupertinoIcons.ellipsis)
-          ],
-        )
-      ],
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Icon(CupertinoIcons.person),
+          Row(
+            children: [
+              Icon(CupertinoIcons.bell),
+              SizedBox(width: 20),
+              Icon(CupertinoIcons.ellipsis)
+            ],
+          )
+        ],
+      ),
     );
   }
 }
