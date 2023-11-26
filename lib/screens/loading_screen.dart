@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:chaos/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -40,7 +40,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomeScreen.id);
+                  },
                   style: ButtonStyle(
                       backgroundColor: const MaterialStatePropertyAll<Color>(
                           Color(0xff010b13)),
@@ -64,21 +66,3 @@ class _LoadingScreenState extends State<LoadingScreen> {
     );
   }
 }
-
-// Text(
-//                       'Get started now',
-//                       style: TextStyle(
-//                           color: Colors.white, fontWeight: FontWeight.w600),
-//                     ),
-
-// TextButton(
-//                   onPressed: () {},
-//                   style: const ButtonStyle(
-//                     backgroundColor:
-//                         MaterialStatePropertyAll<Color>(Colors.black),
-//                     // shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-//                     //     RoundedRectangleBorder(
-//                     //         borderRadius: BorderRadius.circular(10)))
-//                   ),
-//                   child: const Icon(CupertinoIcons.arrow_right),
-//                 ))
