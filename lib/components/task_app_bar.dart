@@ -1,3 +1,4 @@
+import 'package:chaos/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 class TaskAppBar extends StatelessWidget {
@@ -11,6 +12,10 @@ class TaskAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Icon(CupertinoIcons.person),
+          SizedBox(
+            width: 0,
+          ),
+          kChaos,
           Row(
             children: [
               Icon(CupertinoIcons.bell),
