@@ -28,7 +28,10 @@ class HomeScreen extends StatelessWidget {
               height: 15,
             ),
             Text('$month, $day',
-                style: GoogleFonts.abel(fontSize: 40, letterSpacing: 3)),
+                style: GoogleFonts.abel(
+                    fontSize: 40,
+                    letterSpacing: 3,
+                    fontWeight: FontWeight.w700)),
             Text('Just another day',
                 style: GoogleFonts.abel(
                     fontSize: 20,

@@ -11,7 +11,9 @@ class TaskTileView extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: const BoxDecoration(
-          color: Color(0xff8ecae6),
+          boxShadow: CupertinoContextMenu.kEndBoxShadow,
+          color: Color(0xffffffff),
+          border: Border(left: BorderSide(width: 1, color: )),
           borderRadius: BorderRadius.all(Radius.circular(10))),
       width: double.infinity,
       child: Column(
@@ -21,7 +23,7 @@ class TaskTileView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
                 color: Colors.white,
-                // border: Border.all(width: 1, color: Colors.black),
+                border: Border.all(width: 1, color: Colors.black),
                 borderRadius: BorderRadius.circular(40)),
             child: Text(
               'High',
